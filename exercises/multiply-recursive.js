@@ -10,9 +10,26 @@
  */
 
 // Your code :
-const multiply = (a, b) => ('i').repeat(a).repeat(b).length
+const multiply = (a, b) => {
+  if (a < 0 && b < 0) {
+    return ('i').repeat(-a).repeat(-b).length
+  } else if (a < 0) {
+    let res = ('i').repeat(-a).repeat(b).length
 
-console.log(multiply.length)
+    res = -res
+
+    return res
+  } else if (b < 0) {
+    let res = ('i').repeat(a).repeat(-b).length
+
+    res = -res
+
+    return res
+  }
+
+  return ('i').repeat(a).repeat(b).length
+}
+
 //* Begin of tests
 const assert = require('assert')
 
