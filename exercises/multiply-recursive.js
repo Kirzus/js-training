@@ -10,7 +10,9 @@
  */
 
 // Your code :
+const multiply = (a, b) => ('i').repeat(a).repeat(b).length
 
+console.log(multiply.length)
 //* Begin of tests
 const assert = require('assert')
 
