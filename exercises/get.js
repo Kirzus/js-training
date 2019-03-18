@@ -14,6 +14,7 @@ const sourceObject = {
   str: 'some text',
   log: console.log,
 }
+const get = num => sourceObject[num]
 
 // Your code :
 
