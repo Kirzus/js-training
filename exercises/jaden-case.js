@@ -10,10 +10,15 @@
  *
  */
 
-
-
+const jadenCase = s => {
+  return s
+    .toLowerCase()
+    .split(' ')
+    .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ')
+} 
 //* Begin of tests
 const assert = require('assert')
 
-assert.fail('You must write your own tests')
+assert.strictEqual(jadenCase('Salut je suis Arnaud'), 'Salut Je Suis Arnaud')
 // End of tests */
